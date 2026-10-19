@@ -215,7 +215,7 @@ if __name__ == "__main__":
     (HERE / "privacy").mkdir(exist_ok=True); (HERE / "privacy/index.html").write_text(privacy())
     (HERE / "support").mkdir(exist_ok=True); (HERE / "support/index.html").write_text(support())
     (HERE / "404.html").write_text(not_found())
-    (HERE / "CNAME").write_text("scrapwallpaper.com\n")
+    (HERE / "CNAME").write_text("scrapwallpaper.com")  # as GitHub writes it (no line break), so a rebuild leaves it unchanged
     (HERE / ".nojekyll").write_text("")
     (HERE / ".gitignore").write_text("mockups/\n.DS_Store\n")
     print("built: index.html, privacy/index.html, support/index.html, 404.html, CNAME")
