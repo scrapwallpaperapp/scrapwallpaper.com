@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrap: Scrapbook Wallpaper</title>
+<meta name="description" content="Your photos as a scrapbook wallpaper. On a foldable, it opens like a book. Private by design: no account, no ads, no tracking.">
+<meta name="theme-color" content="#BF9563">
+<link rel="canonical" href="https://scrapwallpaper.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Scrap: Scrapbook Wallpaper">
+<meta property="og:description" content="Your photos as a scrapbook wallpaper. On a foldable, it opens like a book. Private by design: no account, no ads, no tracking.">
+<meta property="og:url" content="https://scrapwallpaper.com/">
+<meta property="og:image" content="https://scrapwallpaper.com/assets/img/feature.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/icon-512.png">
+<link rel="apple-touch-icon" href="assets/img/icon-512.png">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.mp { position: absolute; left: 51.5%; top: 0; margin-top: 6%; width: min(28%, 150px); aspect-ratio: 220 / 205; z-index: 2; pointer-events: none; transform: translate(-50%, -50%) rotate(var(--tilt, 0deg)); }
+.pp { position: absolute; left: 48.5%; top: 0; margin-top: -2%; width: min(24%, 130px); aspect-ratio: 236 / 360; z-index: 2; pointer-events: none; transform: translate(-50%, -50%) rotate(var(--tilt, 0deg)); }
+.mp img, .pp img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tp { position: absolute; left: calc(50% + var(--shift, 0%)); top: 0; margin-top: 1%; width: 38%; aspect-ratio: 38 / 11; z-index: 2; transform: translate(-50%, -50%) rotate(var(--tilt, 0deg)); }
+.tp.navy { background: rgba(47, 74, 109, .59); }
+.tp.cream { background: rgba(248, 241, 222, .82); box-shadow: 0 0 0 .5px rgba(43, 38, 32, .12) inset; }
+.tp.washi { width: 44%; aspect-ratio: 44 / 12; background-color: rgba(251, 244, 236, .9); background-image: repeating-linear-gradient(90deg, rgba(196, 71, 58, .5) 0 6px, transparent 6px 12px), repeating-linear-gradient(0deg, rgba(196, 71, 58, .5) 0 6px, transparent 6px 12px); clip-path: polygon(0 0, 100% 0, 98.5% 20%, 100% 40%, 98.5% 60%, 100% 80%, 98.5% 100%, 0 100%, 1.5% 80%, 0 60%, 1.5% 40%, 0 20%); }
+.hero-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+.page { max-width: 760px; margin: 0 auto; }
+.page h2 { font-size: 30px; margin: 26px 0 6px; }
+.page ul { padding-left: 22px; } .page li { margin: 6px 0; }
+.qa h2 { font-size: 30px; margin: 28px 0 4px; }
+</style>
+</head>
+<body class="home">
+<div class="corkbg" style="padding:0 0 46px">
+  <div class="wrap top"><a class="wordmark" href="./"><img src="assets/img/icon-512.png" alt="">Scrap</a><nav><a href="./#foldables">Foldables</a><a href="./#key-photo">Key Photo</a><a href="privacy/">Privacy</a><a href="support/">Support</a></nav></div>
+  <div class="wrap grid2" style="align-items:center;padding-top:16px">
+    <div class="polaroid tilt-l" style="padding:18px 22px 24px"><span class="mp" style="--tilt:-1.5deg"><img src="assets/img/pins/red.shadow.png" alt=""><img src="assets/img/pins/red.png" alt=""></span>
+      <h1 style="font-size:clamp(40px,5.6vw,60px)">Your photos, as a scrapbook on your home screen.</h1>
+      <p style="font-size:19px;margin:14px 0 18px">Polaroids, tape and pins on paper. On a foldable, it opens like a book. Private by design: your photos stay on your phone.</p>
+      <a class="btn" href="#coming-soon">Coming soon on Google Play</a>
+    </div>
+    <div class="hero-shots">
+      <div class="polaroid tilt-r"><span class="pp" style="--tilt:1.2deg"><img src="assets/img/pushpins/blue.shadow.png" alt=""><img src="assets/img/pushpins/blue.png" alt=""></span><img src="assets/img/shot-1.jpg" alt="Close it: the cover. Open it: the book." width="675" height="1200"><div class="cap">Close it, open it</div></div>
+      <div class="polaroid tilt-l" style="margin-top:40px"><span class="pp" style="--tilt:-1.8deg"><img src="assets/img/pushpins/yellow.shadow.png" alt=""><img src="assets/img/pushpins/yellow.png" alt=""></span><img src="assets/img/shot-2.jpg" alt="The home screen with the Key Photo" width="675" height="1200"><div class="cap">Your home screen</div></div>
+    </div>
+  </div>
+</div>
+<section class="section" id="foldables">
+  <div class="wrap grid2">
+    <div class="feature">
+      <h2>Made for foldables</h2>
+      <p>Closed, your phone shows the cover of your book. Open it, and the book opens: the rest of your photos are inside. Three ways to open: Book, Side by side, Centerpiece.</p>
+      <p class="muted">Regular phones get the cover on the lock screen and a page from inside on the home screen.</p>
+    </div>
+    <div class="polaroid tilt-r"><span class="tp navy" style="--tilt:-4deg;--shift:3%"></span><img src="assets/img/feature.jpg" alt="A closed and an open foldable phone showing the same scrapbook" width="1024" height="500"><div class="cap">Closed, the cover. Open, the book.</div></div>
+  </div>
+</section>
+<section class="section" id="key-photo">
+  <div class="wrap grid2">
+    <div class="polaroid corners tilt-l" style="max-width:380px"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span><img src="assets/img/shot-4.jpg" alt="Scrap's camera" width="675" height="1200"><div class="cap">Snap, and it's in your book</div></div>
+    <div class="feature">
+      <h2>The Key Photo</h2>
+      <p>Double-tap the Key Photo on your home screen to open Scrap's camera. Your new photo lands in the book with a <span class="stamp">TAKEN LIVE · OCT 15</span> stamp, and the full-size photo is saved to your phone's gallery too.</p>
+      <p class="muted">A Key Photo widget does the same with one tap.</p>
+    </div>
+  </div>
+</section>
+<section class="section" id="studio">
+  <div class="wrap">
+    <h2 style="text-align:center">Make it yours in the studio</h2>
+    <p class="muted" style="text-align:center;max-width:640px;margin:10px auto 36px">Arrange Polaroids on cork, kraft, lined or plain paper. Tape, pins, photo corners, captions and date stamps. Drag, tilt, resize and layer everything.</p>
+    <div class="grid3">
+      <div class="polaroid tilt-l"><span class="tp cream" style="--tilt:3deg;--shift:-4%"></span><img src="assets/img/shot-3.jpg" alt="The studio" width="675" height="1200"><div class="cap">The studio</div></div>
+      <div class="polaroid tilt-s"><span class="tp washi" style="--tilt:-5deg;--shift:2%"></span><img src="assets/img/shot-7.jpg" alt="Packs: magnets, pins and more" width="675" height="1200"><div class="cap">Packs</div></div>
+      <div class="polaroid tilt-r"><span class="mp" style="--tilt:1.4deg"><img src="assets/img/pins/white.shadow.png" alt=""><img src="assets/img/pins/white.png" alt=""></span><img src="assets/img/shot-8.jpg" alt="The closet investigation look" width="675" height="1200"><div class="cap">Closet investigation</div></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="coming-soon">
+  <div class="wrap grid2">
+    <div class="card">
+      <h3>Free</h3>
+      <p>One book with unlimited photos, the starter looks, frames and tape, the camera and Key Photo, captions, stamps, and the foldable design.</p>
+      <h3>Scrap Plus</h3>
+      <p>One-time purchase, not a subscription: more than one book, extra stamp looks, and two packs of your choice.</p>
+      <h3>Packs</h3>
+      <p class="muted" style="margin:0">Pin board · Fridge door · Journal · Closet investigation · Christmas magnets. Anything you buy works with every look.</p>
+    </div>
+    <div class="card">
+      <h3>Private by design</h3>
+      <p>Scrap keeps your photos on your phone. It has no server, no account, no ads and no tracking, and it removes the hidden location from every photo it saves. Your photos stay yours.</p>
+      <p class="muted">Back your book up any time with "Save a copy". On a new phone, Find my photos puts each photo back in its place.</p>
+      <p class="muted" style="margin:0">Scrap is coming to Google Play for Android. <a href="support/">Questions?</a></p>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="wrap">
+    <div class="hand">Scrap</div>
+    <a href="privacy/">Privacy policy</a><a href="support/">Support</a><a href="mailto:scrapwallpaperapp@gmail.com">scrapwallpaperapp@gmail.com</a>
+    <p style="margin-top:14px">Made by Brayan Castaneda. Google Play is a trademark of Google LLC.</p>
+  </div>
+</footer>
+</body></html>

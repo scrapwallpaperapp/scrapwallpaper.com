@@ -1,0 +1,77 @@
+/* Scrap's website: the app's own colours, fonts and paper (see Android App ui/Theme.kt). */
+@font-face { font-family: "Caveat"; src: url("fonts/Caveat.ttf") format("truetype"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("fonts/Figtree.ttf") format("truetype"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "Special Elite"; src: url("fonts/SpecialElite.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+
+:root {
+  --paper: #F3EBDD; --card: #FBF6EC; --photo: #FFFDF7; --ink: #2B2620; --muted: #6B6157; --line: #D8CBB5;
+  --navy: #2F4A6D; --red: #A23B2C; --cork: #BF9563; --vintage: #EFE3C8; --tape: rgba(47, 74, 109, .45);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.36 0 0 0 0 0.28 0 0 0 0 0.16 0 0 0 0.10 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: "Figtree", system-ui, sans-serif; font-weight: 400; font-size: 17px; line-height: 1.5; color: var(--ink); background: var(--paper); background-image: var(--grain); }
+a { color: var(--navy); }
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3, .hand { font-family: "Caveat", cursive; font-weight: 700; line-height: 1.05; margin: 0; }
+h1 { font-size: clamp(44px, 7vw, 76px); }
+h2 { font-size: clamp(34px, 4.6vw, 48px); }
+h3 { font-size: 30px; }
+p { margin: 0 0 1em; }
+.muted { color: var(--muted); }
+.wrap { width: min(1100px, 100% - 40px); margin: 0 auto; }
+.typed { font-family: "Special Elite", monospace; letter-spacing: .02em; }
+
+/* Top bar */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; flex-wrap: wrap; }
+.top nav { display: flex; flex-wrap: wrap; gap: 4px 0; }
+.wordmark { font-family: "Caveat", cursive; font-weight: 700; font-size: 40px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px; }
+.wordmark img { width: 40px; height: 40px; border-radius: 10px; }
+.top nav a { margin-left: 22px; text-decoration: none; font-weight: 600; color: inherit; }
+
+/* Buttons and pills */
+.btn { display: inline-flex; align-items: center; gap: 10px; background: var(--navy); color: #fff; text-decoration: none; font-weight: 600; padding: 14px 24px; border-radius: 999px; font-size: 17px; }
+.btn.quiet { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.soon { display: inline-block; font-family: "Special Elite", monospace; font-size: 14px; color: var(--red); border: 2px solid var(--red); padding: 4px 10px; transform: rotate(-3deg); background: rgba(255, 253, 247, .9); }
+
+/* Polaroids */
+.polaroid { position: relative; background: var(--photo); padding: 5% 5% 13%; box-shadow: 0 10px 24px rgba(40, 25, 10, .18), 0 1px 2px rgba(40, 25, 10, .12); }
+.polaroid img { width: 100%; }
+.polaroid .cap { position: absolute; left: 0; right: 0; bottom: 3%; text-align: center; font-family: "Caveat", cursive; font-weight: 700; font-size: 26px; color: var(--ink); }
+.tilt-l { transform: rotate(-2.4deg); } .tilt-r { transform: rotate(2deg); } .tilt-s { transform: rotate(-1deg); }
+.tape::before { content: ""; position: absolute; top: -12px; left: 50%; width: 38%; height: 26px; background: var(--tape); transform: translateX(-50%) rotate(-3deg); }
+.corners > .c { position: absolute; width: min(14%, 54px); aspect-ratio: 1; background: linear-gradient(135deg, #2E2A26 50%, transparent 50%); opacity: .9; }
+.corners > .c2 { right: 0; top: 0; transform: scaleX(-1); } .corners > .c3 { right: 0; bottom: 0; transform: scale(-1); } .corners > .c4 { left: 0; bottom: 0; transform: scaleY(-1); }
+.corners > .c1 { left: 0; top: 0; }
+.pin { position: absolute; top: -9px; left: 50%; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: radial-gradient(circle at 35% 32%, #ffb3a9, #c4473a 55%, #7e241c 100%); box-shadow: 3px 5px 6px rgba(30, 20, 10, .4); }
+.pin.blue { background: radial-gradient(circle at 35% 32%, #b7d4ff, #3c6fb0 55%, #1f3f6b 100%); }
+.pin.yellow { background: radial-gradient(circle at 35% 32%, #fff2b0, #e2b53a 55%, #8a6a12 100%); }
+
+/* Cards and sections */
+.card { background: var(--card); border-radius: 18px; padding: 28px; box-shadow: 0 1px 2px rgba(40, 25, 10, .08); }
+.section { padding: 56px 0; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: start; }
+.grid2 > *, .grid3 > *, .hero-shots > * { min-width: 0; }
+.feature p { font-size: 17px; }
+.lined { background-color: var(--vintage); background-image: repeating-linear-gradient(180deg, transparent 0 27px, rgba(120, 90, 50, .16) 27px 28px), var(--grain); }
+.cloth { background-color: #2D4566; color: #F3EBDD; background-image: repeating-linear-gradient(0deg, rgba(8, 18, 34, .16) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, rgba(200, 215, 235, .07) 0 1px, transparent 1px 5px); }
+.corkbg { background-color: var(--cork); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.22 0 0 0 0 0.08 0 0 0 0.45 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E"); }
+.plate { display: inline-block; background: var(--paper); color: var(--ink); padding: 6px 44px 10px; font-family: "Caveat", cursive; font-weight: 700; font-size: clamp(56px, 8vw, 92px); line-height: 1; transform: rotate(-1.2deg); box-shadow: 0 6px 14px rgba(0, 0, 0, .35); }
+.cover-border { border: 1.5px solid rgba(243, 235, 221, .45); border-radius: 6px; }
+.stamp { display: inline-block; font-family: "Special Elite", monospace; font-size: 15px; color: var(--red); border: 2px solid var(--red); padding: 3px 9px; background: rgba(255, 253, 247, .92); transform: rotate(-4deg); }
+.footer { padding: 36px 0 48px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); margin-top: 24px; }
+.footer a { color: var(--ink); text-decoration: none; margin-right: 22px; font-weight: 600; }
+.footer .hand { font-size: 30px; color: var(--ink); margin-bottom: 6px; }
+.badge-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 22px; }
+
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .wrap { width: min(1100px, 100% - 32px); }
+  .top nav a { margin-left: 0; margin-right: 16px; font-size: 15px; }
+  .wordmark { font-size: 34px; }
+  .grid2, .grid3 { grid-template-columns: 1fr; gap: 28px; }
+  .section { padding: 40px 0; }
+  .card { padding: 22px; }
+  .hero-shots { grid-template-columns: 1fr 1fr !important; }
+}
