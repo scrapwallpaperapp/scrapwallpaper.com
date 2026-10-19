@@ -60,7 +60,7 @@ def footer(root):
   <div class="wrap">
     <div class="hand">Scrap</div>
     <a href="{root}privacy/">Privacy policy</a><a href="{root}support/">Support</a><a href="mailto:{EMAIL}">{EMAIL}</a>
-    <p style="margin-top:14px">Made by Brayan Castaneda. Google Play is a trademark of Google LLC.</p>
+    <p style="margin-top:14px">Made by Brayan Castaneda De Santiago. Google Play is a trademark of Google LLC.</p>
   </div>
 </footer>"""
 
