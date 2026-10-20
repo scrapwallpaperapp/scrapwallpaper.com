@@ -60,7 +60,7 @@ def footer(root):
   <div class="wrap">
     <div class="hand">Scrap</div>
     <a href="{root}privacy/">Privacy policy</a><a href="{root}support/">Support</a><a href="mailto:{EMAIL}">{EMAIL}</a>
-    <p style="margin-top:14px">Made by Brayan Castaneda De Santiago. Google Play is a trademark of Google LLC.</p>
+    <p style="margin-top:14px">Made by Brayan Castaneda De Santiago. Patent pending. Google Play is a trademark of Google LLC.</p>
   </div>
 </footer>"""
 
@@ -90,7 +90,7 @@ def home():
   <div class="wrap grid2">
     <div class="feature">
       <h2>Made for foldables</h2>
-      <p>Closed, your phone shows the cover of your book. Open it, and the book opens: the rest of your photos are inside. Three ways to open: Book, Side by side, Centerpiece.</p>
+      <p>Closed, your phone shows the cover of your book. Open it, and the book opens: the rest of your photos are inside. Three ways to open: Book, Side by side, Centerpiece. Patent pending.</p>
       <p class="muted">Regular phones get the cover on the lock screen and a page from inside on the home screen.</p>
     </div>
     <div class="polaroid tilt-r">{tape("navy", -4, 3)}<img src="assets/img/feature.jpg" alt="A closed and an open foldable phone showing the same scrapbook" width="1024" height="500"><div class="cap">Closed, the cover. Open, the book.</div></div>
