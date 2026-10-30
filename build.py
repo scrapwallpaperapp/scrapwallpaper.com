@@ -3,12 +3,14 @@
 
 Run:  python3 build.py
 Writes: index.html, privacy/index.html (from the app's own privacy-policy.txt, so the words never drift apart),
+privacy/iphone/index.html (the same way, from the iPhone app's privacy-policy-iphone.txt),
 support/index.html, 404.html. The pages are plain files; GitHub Pages serves them as they are.
 """
 import pathlib, re, html
 
 HERE = pathlib.Path(__file__).resolve().parent
 APP_POLICY = HERE.parent / "Android App/app/src/main/assets/privacy-policy.txt"
+IPHONE_POLICY = HERE.parent / "iOS App/Scrap/privacy-policy-iphone.txt"
 SITE = "https://scrapwallpaper.com"
 EMAIL = "scrapwallpaperapp@gmail.com"
 
@@ -59,7 +61,7 @@ def footer(root):
     return f"""<footer class="footer">
   <div class="wrap">
     <div class="hand">Scrap</div>
-    <a href="{root}privacy/">Privacy policy</a><a href="{root}support/">Support</a><a href="mailto:{EMAIL}">{EMAIL}</a>
+    <a href="{root}privacy/">Privacy policy</a><a href="{root}privacy/iphone/">iPhone privacy policy</a><a href="{root}support/">Support</a><a href="mailto:{EMAIL}">{EMAIL}</a>
     <p style="margin-top:14px">Made by Brayan Castaneda De Santiago. Patent pending. Google Play is a trademark of Google LLC.</p>
   </div>
 </footer>"""
@@ -140,9 +142,9 @@ def home():
 """
     return head("Scrap: Scrapbook Wallpaper", "Your photos as a scrapbook wallpaper. On a foldable, it opens like a book. Private by design: no account, no ads, no tracking.", "/", "") + body
 
-# ---- privacy policy: the app's own text -----------------------------------------------------------------------
-def privacy():
-    text = APP_POLICY.read_text()
+# ---- privacy policy: the app's own text (Android's at /privacy/, the iPhone's at /privacy/iphone/) --------------
+def privacy(source=APP_POLICY, path="/privacy/", root="../", title="Privacy policy · Scrap"):
+    text = source.read_text()
     blocks = []
     for n, group in enumerate(re.split(r"\n\s*\n", text.strip())):
         lines = [l.strip() for l in group.splitlines() if l.strip()]
@@ -168,12 +170,12 @@ def privacy():
         else: out.append(f"<p>{esc}</p>")
     close()
     body = f"""<body>
-<div class="corkbg">{topbar("../")}</div>
+<div class="corkbg">{topbar(root)}</div>
 <main class="wrap section"><article class="card page">{''.join(out)}</article></main>
-{footer("../")}
+{footer(root)}
 </body></html>
 """
-    return head("Privacy policy · Scrap", "Scrap's privacy policy: no account, no ads, no tracking. Your photos stay on your phone.", "/privacy/", "../") + body
+    return head(title, "Scrap's privacy policy: no account, no ads, no tracking. Your photos stay on your phone.", path, root) + body
 
 # ---- support ---------------------------------------------------------------------------------------------------
 def support():
@@ -213,9 +215,11 @@ def not_found():
 if __name__ == "__main__":
     (HERE / "index.html").write_text(home())
     (HERE / "privacy").mkdir(exist_ok=True); (HERE / "privacy/index.html").write_text(privacy())
+    (HERE / "privacy/iphone").mkdir(exist_ok=True)
+    (HERE / "privacy/iphone/index.html").write_text(privacy(IPHONE_POLICY, "/privacy/iphone/", "../../", "iPhone privacy policy · Scrap"))
     (HERE / "support").mkdir(exist_ok=True); (HERE / "support/index.html").write_text(support())
     (HERE / "404.html").write_text(not_found())
     (HERE / "CNAME").write_text("scrapwallpaper.com")  # as GitHub writes it (no line break), so a rebuild leaves it unchanged
     (HERE / ".nojekyll").write_text("")
     (HERE / ".gitignore").write_text("mockups/\n.DS_Store\n")
-    print("built: index.html, privacy/index.html, support/index.html, 404.html, CNAME")
+    print("built: index.html, privacy/index.html, privacy/iphone/index.html, support/index.html, 404.html, CNAME")
