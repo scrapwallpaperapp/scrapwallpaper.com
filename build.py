@@ -62,7 +62,7 @@ def footer(root):
   <div class="wrap">
     <div class="hand">Scrap</div>
     <a href="{root}privacy/">Privacy policy</a><a href="{root}privacy/iphone/">iPhone privacy policy</a><a href="{root}support/">Support</a><a href="mailto:{EMAIL}">{EMAIL}</a>
-    <p style="margin-top:14px">Made by Brayan Castaneda De Santiago. Patent pending. Google Play is a trademark of Google LLC.</p>
+    <p style="margin-top:14px">Made by Brayan Castaneda De Santiago. Patent pending. Google Play is a trademark of Google LLC. iPhone and App Store are trademarks of Apple Inc.</p>
   </div>
 </footer>"""
 
@@ -184,20 +184,26 @@ def support():
 <main class="wrap section"><article class="card page qa">
 <h1>Support</h1>
 <p style="font-size:19px">Questions, ideas or something not working? Write to <a href="mailto:{EMAIL}?subject=Scrap%20feedback">{EMAIL}</a>. A person reads every message.</p>
-<p class="muted">The quickest way from the app: Settings → Send feedback. It fills in your phone's model and Android version for you, which helps a lot with problems.</p>
+<p class="muted">The quickest way from the app: Settings → Send feedback. It fills in your phone's model and its Android or iOS version for you, which helps a lot with problems.</p>
 <h2>Where are my photos kept?</h2>
-<p>On your phone, in Scrap's own private storage. Scrap has no server and no account, so nothing is uploaded anywhere. Photos taken with Scrap's camera are also saved to your phone's gallery, in an album called Scrap.</p>
+<p>On your phone, in Scrap's own private storage. Scrap has no server and no account, so nothing is uploaded anywhere.</p>
+<p><b>Android:</b> photos taken with Scrap's camera are also saved to your phone's gallery, in an album called Scrap.</p>
+<p><b>iPhone:</b> photos taken with Scrap's camera are also saved to your Photos library. Your iPhone's own backup leaves Scrap's photos out, so keep a copy of your book (below).</p>
 <h2>How do I move my book to a new phone?</h2>
-<p>In Scrap's Settings, tap "Save a copy of your book" and keep the file somewhere safe, like Google Drive. On the new phone, open Scrap and choose "Open a book file". If your phone's own backup brought your book back without its pictures, tap "Find my photos" and pick them again: each one goes back in its place.</p>
+<p>In Scrap's Settings, tap "Save a copy of your book" and keep the file somewhere safe: Google Drive on Android, iCloud Drive or Files on iPhone. On the new phone, open Scrap and choose "Open a book file". It's the same file on both, so a book can move from Android to iPhone and back. If your book came back without its pictures, tap "Find my photos" and pick them again: each one goes back in its place.</p>
+<h2>How do I set my wallpaper on iPhone?</h2>
+<p>iPhone doesn't let apps change the wallpaper themselves, so Scrap saves your book as pictures and you set them once in Settings. On Scrap's Home, tap "Save to Photos", then "How to set it": Scrap shows the steps for your iPhone. To have your Home Screen show your newest page each time you close Scrap, tap "Make it automatic" and set it up once in the Shortcuts app. It's optional.</p>
 <h2>Purchases and refunds</h2>
-<p>Scrap Plus and the packs are bought through Google Play, which also handles refunds. Your purchases come back by themselves on a new phone with the same Google account; if they don't, use "Restore" in Scrap's Settings.</p>
+<p><b>Android:</b> Scrap Plus and the packs are bought through Google Play, which also handles refunds. Your purchases come back by themselves on a new phone with the same Google account; if they don't, use "Restore" in Scrap's Settings.</p>
+<p><b>iPhone:</b> Scrap Plus and the packs are bought through the App Store, and Apple handles refunds at <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>. On a new iPhone, use the same Apple Account, then tap "Restore" in Scrap's Settings.</p>
+<p class="muted">Purchases stay with the store they were bought in: Scrap has no account to link them, so something bought on Google Play doesn't carry over to an iPhone, or the other way around.</p>
 <h2>Privacy</h2>
-<p>The short version: no account, no ads, no tracking, and your photos stay on your phone. The full <a href="../privacy/">privacy policy</a> is here too.</p>
+<p>The short version: no account, no ads, no tracking, and your photos stay on your phone. The full privacy policies are here too: <a href="../privacy/">Android</a> and <a href="../privacy/iphone/">iPhone</a>.</p>
 </article></main>
 {footer("../")}
 </body></html>
 """
-    return head("Support · Scrap", "Help with Scrap, the scrapbook wallpaper app: contact, moving to a new phone, purchases.", "/support/", "../") + body
+    return head("Support · Scrap", "Help with Scrap, the scrapbook wallpaper app for Android and iPhone: contact, moving to a new phone, the wallpaper on iPhone, purchases.", "/support/", "../") + body
 
 def not_found():
     body = f"""<body>

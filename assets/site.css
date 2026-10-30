@@ -49,6 +49,7 @@ p { margin: 0 0 1em; }
 
 /* Cards and sections */
 .card { background: var(--card); border-radius: 18px; padding: 28px; box-shadow: 0 1px 2px rgba(40, 25, 10, .08); }
+.card a { overflow-wrap: anywhere; } /* the email address wraps on a phone instead of running off the card */
 .section { padding: 56px 0; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: start; }
