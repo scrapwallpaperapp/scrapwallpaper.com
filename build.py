@@ -79,8 +79,8 @@ def home():
   <div class="wrap grid2" style="align-items:center;padding-top:16px">
     <div class="polaroid tilt-l" style="padding:18px 22px 24px">{mappin('red', -1.5)}
       <h1 style="font-size:clamp(40px,5.6vw,60px)">Your photos, as a scrapbook on your home screen.</h1>
-      <p style="font-size:19px;margin:14px 0 18px">Instant prints, tape and pins on paper. On a foldable, it opens like a book. Private by design: your photos stay on your phone.</p>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=app.scrap&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dorganic%26utm_campaign%3Dscr-web-play">Get it on Google Play</a>
+      <p style="font-size:19px;margin:14px 0 18px">Polaroids, tape and pins on paper. On a foldable, it opens like a book. Private by design: your photos stay on your phone.</p>
+      <a class="btn" href="#coming-soon">Coming soon on Google Play</a>
     </div>
     <div class="hero-shots">
       <div class="polaroid tilt-r">{pushpin('blue', 1.2)}<img src="assets/img/shot-1.jpg" alt="Close it: the cover. Open it: the book." width="675" height="1200"><div class="cap">Close it, open it</div></div>
@@ -111,7 +111,7 @@ def home():
 <section class="section" id="studio">
   <div class="wrap">
     <h2 style="text-align:center">Make it yours in the studio</h2>
-    <p class="muted" style="text-align:center;max-width:640px;margin:10px auto 36px">Arrange instant prints on cork, kraft, lined or plain paper. Tape, pins, photo corners, captions and date stamps. Drag, tilt, resize and layer everything.</p>
+    <p class="muted" style="text-align:center;max-width:640px;margin:10px auto 36px">Arrange Polaroids on cork, kraft, lined or plain paper. Tape, pins, photo corners, captions and date stamps. Drag, tilt, resize and layer everything.</p>
     <div class="grid3">
       <div class="polaroid tilt-l">{tape("cream", 3, -4)}<img src="assets/img/shot-3.jpg" alt="The studio" width="675" height="1200"><div class="cap">The studio</div></div>
       <div class="polaroid tilt-s">{tape("washi", -5, 2)}<img src="assets/img/shot-7.jpg" alt="Packs: magnets, pins and more" width="675" height="1200"><div class="cap">Packs</div></div>
@@ -125,7 +125,7 @@ def home():
       <h3>Free</h3>
       <p>One book with unlimited photos, the starter looks, frames and tape, the camera and Key Photo, captions, stamps, and the foldable design.</p>
       <h3>Scrap Plus</h3>
-      <p>One-time purchase, not a subscription: more than one book, extra stamp looks, your own stickers, and two packs of your choice.</p>
+      <p>One-time purchase, not a subscription: more than one book, extra stamp looks, and two packs of your choice.</p>
       <h3>Packs</h3>
       <p class="muted" style="margin:0">Pin board · Fridge door · Journal · Closet investigation · Christmas magnets. Anything you buy works with every look.</p>
     </div>
@@ -133,7 +133,7 @@ def home():
       <h3>Private by design</h3>
       <p>Scrap keeps your photos on your phone. It has no server, no account, no ads and no tracking, and it removes the hidden location from every photo it saves. Your photos stay yours.</p>
       <p class="muted">Back your book up any time with "Save a copy". On a new phone, Find my photos puts each photo back in its place.</p>
-      <p class="muted" style="margin:0">Scrap is on Google Play for Android. <a href="support/">Questions?</a></p>
+      <p class="muted" style="margin:0">Scrap is coming to Google Play for Android. <a href="support/">Questions?</a></p>
     </div>
   </div>
 </section>
