@@ -80,7 +80,10 @@ def home():
     <div class="polaroid tilt-l" style="padding:18px 22px 24px">{mappin('red', -1.5)}
       <h1 style="font-size:clamp(40px,5.6vw,60px)">Your photos, as a scrapbook on your home screen.</h1>
       <p style="font-size:19px;margin:14px 0 18px">Instant prints, tape and pins on paper. On a foldable, it opens like a book. Private by design: your photos stay on your phone.</p>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=app.scrap&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dorganic%26utm_campaign%3Dscr-web-play">Get it on Google Play</a>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=app.scrap&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dorganic%26utm_campaign%3Dscr-web-play">Get it on Google Play</a>
+        <a class="btn" href="https://apps.apple.com/app/scrap-scrapbook-wallpaper/id6828555224">Download on the App Store</a>
+      </div>
     </div>
     <div class="hero-shots">
       <div class="polaroid tilt-r">{pushpin('blue', 1.2)}<img src="assets/img/shot-1.jpg" alt="Close it: the cover. Open it: the book." width="675" height="1200"><div class="cap">Close it, open it</div></div>
@@ -133,7 +136,7 @@ def home():
       <h3>Private by design</h3>
       <p>Scrap keeps your photos on your phone. It has no server, no account, no ads and no tracking, and it removes the hidden location from every photo it saves. Your photos stay yours.</p>
       <p class="muted">Back your book up any time with "Save a copy". On a new phone, Find my photos puts each photo back in its place.</p>
-      <p class="muted" style="margin:0">Scrap is on Google Play for Android. <a href="support/">Questions?</a></p>
+      <p class="muted" style="margin:0">Scrap is on Google Play for Android and on the App Store for iPhone. <a href="support/">Questions?</a></p>
     </div>
   </div>
 </section>
