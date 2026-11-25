@@ -82,7 +82,7 @@ def home():
       <p style="font-size:19px;margin:14px 0 18px">Instant prints, tape and pins on paper. On a foldable, it opens like a book. Private by design: your photos stay on your phone.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px">
         <a class="btn" href="https://play.google.com/store/apps/details?id=app.scrap&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dorganic%26utm_campaign%3Dscr-web-play">Get it on Google Play</a>
-        <a class="btn" href="https://apps.apple.com/app/scrap-scrapbook-wallpaper/id6828555224">Download on the App Store</a>
+        <a class="btn" href="https://apps.apple.com/app/apple-store/id6828555224?pt=129705326&amp;ct=scr-web&amp;mt=8">Download on the App Store</a>
       </div>
     </div>
     <div class="hero-shots">
